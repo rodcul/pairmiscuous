@@ -10,7 +10,7 @@
   "scripts": {
     "start": "ember server",
     "build": "ember build",
-    "test": "karma start tests/karma/karma.conf.js",
+    "test": "karma start tests/karma/karma.conf.js --single-run",
     "postinstall": "bower install"
   },
   "repository": "",
