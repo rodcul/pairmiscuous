@@ -37,9 +37,11 @@
     "ember-export-application-global": "^1.0.2",
     "express": "^4.13.0",
     "mongoose": "^4.0.6",
-    "watchman": "^0.1.8"
+    "watchman": "^0.1.8",
+    "mongodb": "^2.0.35"
   },
   "devDependencies": {
+    "faker": "^2.1.5",
     "jasmine-core": "^2.3.4",
     "karma": "^0.12.37",
     "karma-chrome-launcher": "^0.2.0",

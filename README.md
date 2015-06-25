@@ -74,6 +74,13 @@ You will need the following things properly installed on your computer.
 * change into the new directory
 * `npm install`
 
+## Faker Test Data
+
+  To add in fake test data (into database 'promiscuousTest'), run
+
+* node app/fakerUserData.js (To create a cohort of 30 in the users table)
+* node app/fakerPairData.js (To create 15 pairs in the pairs table)
+
 ## Running / Development
 
 * `ember server`
