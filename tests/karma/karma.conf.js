@@ -1,6 +1,3 @@
-// Karma configuration
-// Generated on Thu Jun 25 2015 13:31:13 GMT+0100 (BST)
-
 module.exports = function(config) {
   config.set({
 
@@ -16,19 +13,18 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'js/**/*.js',
+      'app/helpers/*.js',
       'tests/**/*.spec.js'
     ],
 
 
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-    },
+    preprocessors: {},
 
 
     // test results reporter to use
@@ -56,12 +52,11 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    // browsers: ['PhantomJS', 'Chrome'],
     browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false
-  })
-}
+  });
+};
