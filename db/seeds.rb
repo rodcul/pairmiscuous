@@ -7,9 +7,38 @@ require 'faker'
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-50.times do |i|
+
+c = Cohort.create(name: '#april2015')
+
+20.times do |i|
  User.create(username: Faker::Internet.user_name,
               full_name: Faker::Name.name,
               slack_username: Faker::Internet.user_name,
-              profile_picture: Faker::Avatar.image)
+              profile_picture: Faker::Avatar.image,
+              cohort_id: c.id)
+end
+
+c = Cohort.create(name: '#june2015')
+30.times do |i|
+ User.create(username: Faker::Internet.user_name,
+              full_name: Faker::Name.name,
+              slack_username: Faker::Internet.user_name,
+              profile_picture: Faker::Avatar.image,
+              cohort_id: c.id)
+end
+c = Cohort.create(name: '#alumni')
+10.times do |i|
+ User.create(username: Faker::Internet.user_name,
+              full_name: Faker::Name.name,
+              slack_username: Faker::Internet.user_name,
+              profile_picture: Faker::Avatar.image,
+              cohort_id: c.id)
+end
+c = Cohort.create(name: '#coaches')
+10.times do |i|
+ User.create(username: Faker::Internet.user_name,
+              full_name: Faker::Name.name,
+              slack_username: Faker::Internet.user_name,
+              profile_picture: Faker::Avatar.image,
+              cohort_id: c.id)
 end
