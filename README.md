@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/rodcul/pairmiscuous.svg?branch=master)](https://travis-ci.org/rodcul/pairmiscuous)
+[![Coverage Status](https://coveralls.io/repos/rodcul/pairmiscuous/badge.svg)](https://coveralls.io/r/rodcul/pairmiscuous)
+
 # Pairmiscuous
 
 Promiscuous Pair Programming web app @ Makers Academy Makermix
