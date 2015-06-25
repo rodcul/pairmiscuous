@@ -44,4 +44,8 @@ mongoose.connect('mongodb://localhost/promiscuousTest', function(err, db) {
 
   }
 
+setTimeout( function () {
+  mongoose.disconnect();
+}, 2000);
+
 });

@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost/promiscuousTest', function(err, db) {
         name: faker.name.findName(),
         email: faker.internet.email(),
         username: faker.internet.userName(),
-        image: faker.image.image()
+        image: faker.image.avatar()
 
       });
 
@@ -30,5 +30,10 @@ mongoose.connect('mongodb://localhost/promiscuousTest', function(err, db) {
     }
 
   }
+
+  setTimeout( function () {
+    mongoose.disconnect();
+  }, 2000);
+
 
 });
