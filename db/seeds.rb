@@ -33,8 +33,8 @@ def assign_pairs(cohort_name)
   cohort = Cohort.find_by(name: cohort_name)
   x = 1
   count = 1
-  cohort.users.shuffle.each do |u|
-    Pairing.create(pair_id: x, user_id: u.id)
+  cohort.users.shuffle.each do |user|
+    Pairing.create(pair_id: x, user_id: user.id, cohort_id: cohort.id)
     x += 1 if count.even?
     count += 1
   end
@@ -42,3 +42,4 @@ def assign_pairs(cohort_name)
 end
 
 assign_pairs('#april2015')
+assign_pairs('#june2015')
