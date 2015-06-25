@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @next_pair = User.first.username
   end
 
   # GET /users/1
