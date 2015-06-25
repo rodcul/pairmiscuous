@@ -10,7 +10,7 @@
   "scripts": {
     "start": "ember server",
     "build": "ember build",
-    "test": "ember test",
+    "test": "ember test && karma start test/karma.conf.js",
     "postinstall": "bower install"
   },
   "repository": "",
@@ -38,5 +38,15 @@
     "express": "^4.13.0",
     "mongoose": "^4.0.6",
     "watchman": "^0.1.8"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.37",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-cli": "0.0.4",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "phantomjs": "^1.9.17",
+    "protractor": "^2.1.0"
   }
 }
