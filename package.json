@@ -38,5 +38,8 @@
     "express": "^4.13.0",
     "mongoose": "^4.0.6",
     "watchman": "^0.1.8"
+  },
+  "devDependencies": {
+    "faker": "^2.1.5"
   }
 }
