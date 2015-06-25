@@ -40,6 +40,7 @@
     "watchman": "^0.1.8"
   },
   "devDependencies": {
-    "faker": "^2.1.5"
+    "faker": "^2.1.5",
+    "mongodb": "^2.0.35"
   }
 }
