@@ -33,7 +33,7 @@ def assign_pairs(cohort_name)
   cohort = Cohort.find_by(name: cohort_name)
   x = 1
   count = 1
-  cohort.users.each do |u|
+  cohort.users.shuffle.each do |u|
     Pairing.create(pair_id: x, user_id: u.id)
     x += 1 if count.even?
     count += 1
