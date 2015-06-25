@@ -1,12 +1,12 @@
 # Pairmiscuous
 
-Promiscuous Pair Programming web app @ Makers Academy Makermix
+Promiscuous Pair Programming web app @ Makers Academy Makermix
 
 https://github.com/makersacademy/course/blob/master/makermix/intro_to_makermix.md
 
 Kanban board: https://waffle.io/rodcul/pairmiscuous
 
-![Pairing is cairing](https://pbs.twimg.com/media/CHh9GAyUwAIlInZ.png)
+![Pairing is cairing](app/assets/images/pairmiscuous.jpg)
 
 ## Goals for app
 - Reduce awkwardness around pairing
@@ -62,50 +62,32 @@ Kanban board: https://waffle.io/rodcul/pairmiscuous
 You will need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+* Ruby on Rails
+* PSQL
 
-## Installation
+### Project setup on local environment
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+```
+git clone https://github.com/rodcul/pairmiscuous.git
+cd pairmiscuous
+bundle
+bin/rake db:create
+rails s
+```
+Now visit http://localhost:3000/ in your browser!
 
-## Running / Development
+#### Tests
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+```
+bin/rake db:create RAILS_ENV=test
+rspec
+```
 
-### Code Generators
+### Seed database with 50 users
+(an error will be thrown if the rails server is running)
 
-Make use of the many generators for code, try `ember help generate` for more details
+```bin/rake db:seed```
 
-### Running Tests
+Reset database:
 
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
-
-
-
-
+```bin/rake db:reset```
