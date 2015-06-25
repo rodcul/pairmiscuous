@@ -5,6 +5,7 @@ Promiscuous Pair Programming web app @ Makers Academy Makermix
 https://github.com/makersacademy/course/blob/master/makermix/intro_to_makermix.md
 
 Kanban board: https://waffle.io/rodcul/pairmiscuous
+Heroku: https://pairmiscuous.herokuapp.com/
 
 ![Pairing is cairing](https://pbs.twimg.com/media/CHh9GAyUwAIlInZ.png)
 
@@ -103,8 +104,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
-
-
-
-
