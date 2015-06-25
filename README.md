@@ -67,6 +67,7 @@ You will need the following things properly installed on your computer.
 * [Bower](http://bower.io/)
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
+* MongoDB
 
 ## Installation
 
@@ -76,14 +77,19 @@ You will need the following things properly installed on your computer.
 
 ## Faker Test Data
 
+  Make sure you have mongo installed and running
+  * `brew install mongodb`
+  * `mongod` starts mongodb
+
   To add in fake test data (into database 'promiscuousTest'), run
 
-* node app/fakerUserData.js (To create a cohort of 30 in the users table)
-* node app/fakerPairData.js (To create 15 pairs in the pairs table)
+* `node app/fakerUserData.js` (To create a cohort of 30 in the users table)
+* `node app/fakerPairData.js` (To create 15 pairs in the pairs table)
 
 ## Running / Development
 
-* `ember server`
+* `brew install mongodb` starts mongo db
+* `npm start` starts node server
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
@@ -92,8 +98,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Running Tests
 
-* `ember test`
-* `ember test --server`
+* `npm test`
 
 ### Building
 
