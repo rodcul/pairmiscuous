@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <title>Pairmiscuous</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <title>Pairmiscuous</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-with, initial-scale=0.1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  <%= stylesheet_link_tag "styles.css" %>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <% if current_user %>
+      <%= link_to current_user.name, user_path(current_user) %>
+      <%= link_to 'Log Out', signout_path %>
+  <% end %>
 
+
+
+<body>
 <%= yield %>
 
+
+
 </body>
+
+
+
+
+
+
+
+
+
 </html>
