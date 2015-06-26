@@ -5,9 +5,6 @@ include PairingsHelper
 describe 'Create a pair' do
 
   it 'should return an available pair partner' do
-    # puts "Cohorts: #{Cohort.all.length}"
-    # puts "Users: #{User.all.length}"
-    # puts "Pairings: #{Pairing.all.length}"
 
     cohort = Cohort.create()
     user = []
@@ -16,6 +13,16 @@ describe 'Create a pair' do
 
     result = pair_me(user[1],cohort)
     expect(result).to eq([user[2]])
+  end
+
+  it 'should return all available partners excluding the user being matched' do
+    cohort = Cohort.create()
+    user = []
+    20.times {user << cohort.users.create()}
+    result = pair_me(user[0],cohort).sort
+    expect(result.length).to eq(19)
+    user[1..19].each { |use| expect(result).to include(use) }
+    expect(result).not_to include(user[0])
   end
 
 end
