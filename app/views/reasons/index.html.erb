@@ -15,8 +15,8 @@
   <tbody>
     <% @reasons.each do |reason| %>
       <tr>
-        <td><%= reason.user_id %></td>
-        <td><%= reason.pair_id %></td>
+        <td><%= reason.user.name unless reason.user.nil? %></td>
+        <td><%= User.find(reason.pair_id).name unless reason.pair_id.nil? %></td>
         <td><%= reason.reason %></td>
       </tr>
     <% end %>
