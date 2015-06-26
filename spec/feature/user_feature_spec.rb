@@ -5,7 +5,7 @@ feature 'As a Pairmiscuous user' do
 
   before(:each) do
     User.create(username: "Molly")
-    User.create(username: "Rocco")
+    User.create(username: "Daryl")
     User.create(username: "Tim")
     User.create(username: 'Chidu')
   end
@@ -23,9 +23,15 @@ feature 'As a Pairmiscuous user' do
     expect(page).to have_content('Congratulations on pairing.')
   end
 
-  scenario 'no pairs available' do
+  xscenario 'no pairs available' do
+    Pairing.create(pair_id: 1, user_id: 1)
+    Pairing.create(pair_id: 1, user_id: 2)
+    Pairing.create(pair_id: 2, user_id: 3)
+    Pairing.create(pair_id: 2, user_id: 4)
     sign_up('Rocco', 'rocco')
     click_link('Back')
+    expect(page).to have_content('Please speak to the coaches to find a pair')
+  end
 
 
   def sign_up(username, name)

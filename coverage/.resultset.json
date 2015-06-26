@@ -1,11 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/spec/dummy_test_spec.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/spec/dummy_test_spec.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         1,
         null,
         1,
@@ -16,11 +12,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/spec/rails_helper.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/spec/rails_helper.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         null,
         1,
         1,
@@ -74,22 +66,14 @@
         1,
         null
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/environment.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/environment.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         null,
         1,
         null,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/application.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/application.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         1,
         null,
         1,
@@ -126,20 +110,12 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/boot.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/boot.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         1,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/environments/test.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/environments/test.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         1,
         null,
         null,
@@ -183,11 +159,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/initializers/assets.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/initializers/assets.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         null,
         null,
         null,
@@ -200,11 +172,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/initializers/backtrace_silencers.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/initializers/backtrace_silencers.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         null,
         null,
         null,
@@ -213,30 +181,18 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/initializers/cookies_serializer.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/initializers/cookies_serializer.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         null,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/initializers/filter_parameter_logging.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/initializers/filter_parameter_logging.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         null,
         null,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/initializers/inflections.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/initializers/inflections.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         null,
         null,
         null,
@@ -254,35 +210,23 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/initializers/mime_types.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/initializers/mime_types.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         null,
         null,
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/initializers/omniauth.rb": [
         1,
         1,
         null
       ],
       "/Users/mollie/Makers/pairmiscuous/config/initializers/session_store.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/initializers/session_store.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         null,
         null,
         1
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/initializers/wrap_parameters.rb": [
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/initializers/wrap_parameters.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         null,
         null,
         null,
@@ -298,16 +242,14 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/config/routes.rb": [
         1,
+        null,
+        null,
         1,
         1,
         1,
         1,
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/config/routes.rb": [
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
         1,
         1,
         null,
@@ -366,7 +308,6 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/mollie/Makers/pairmiscuous/app/helpers/application_helper.rb": [
         1,
         null
@@ -376,6 +317,10 @@
         null
       ],
       "/Users/mollie/Makers/pairmiscuous/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/mollie/Makers/pairmiscuous/app/helpers/welcome_helper.rb": [
         1,
         null
       ],
@@ -403,6 +348,17 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
         null,
         null,
         1,
@@ -527,18 +483,6 @@
         null
       ]
     },
-    "timestamp": 1435318653
-=======
-      "/Users/rocco/makers/week9/pairmiscuous/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/rocco/makers/week9/pairmiscuous/app/helpers/users_helper.rb": [
-        1,
-        null
-      ]
-    },
-    "timestamp": 1435306949
->>>>>>> 5e72e26986182bce31a020cb50885c7f1ddedf3e
+    "timestamp": 1435324589
   }
 }
