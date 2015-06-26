@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :users
-  root to: "users#new"
+  root to: "users#index"
   get "/login" => 'sessions#new'
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
