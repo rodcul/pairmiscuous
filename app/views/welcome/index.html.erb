@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <title>Pairmiscuous</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-with, initial-scale=0.1">
@@ -15,39 +16,39 @@
   <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
+</head>
+
+
 
 <body>
 
-  <header>
-    <center>
-      <h1>
-        Pairmiscuous
-      </h1>
-      <h3>"Not Pairing makes Pandas sad"</h3>
-  </header>
+	<header>
+		<center>
+			<h1>
+				Pairmiscuous
+			</h1>
+			<h3>"Not Pairing makes Pandas sad"</h3>
+	</header>
 
-  <div class="container">
-    <div class="loginimage">
-    <center>
-      <img src="http://img04.deviantart.net/7530/i/2015/112/e/e/panda_logo_by_designguru211-d63i4d4.png">
-  </div>
-  <br>
-  <br>
+	<div class="container">
+		<div class="loginimage">
+			<center>
+				<img src="http://img04.deviantart.net/7530/i/2015/112/e/e/panda_logo_by_designguru211-d63i4d4.png">
+		</div>
+		<br>
+		<br>
 
-  <GitButton>
-    <center>
-    <a class="btn btn-block btn-social btn-github">
-      <i class="fa fa-github"></i> Sign in
-    </a>
+		<% unless current_user %>
+			<GitButton>
+				<center>
+					<a class="btn btn-block btn-social btn-github">
+						<i class="fa fa-github"></i>
+						<%=link_to "Sign in with Github", "/auth/github"%>
+					</a>
 
-    <br>
-
-    <a class="btn btn-block btn-social btn-github">
-      <i class="fa fa-github"></i> Sign up with Github
-    </a>
-
-  </GitButton>
-</div>
+			</GitButton>
+			<% end %>
+	</div>
 
 
 
@@ -56,7 +57,7 @@
 
 
 
-  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
 
 </body>
