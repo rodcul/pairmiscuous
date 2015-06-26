@@ -8,7 +8,6 @@ module PairingsHelper
     available_users = unpaired_users_today(cohort_of_user(primary_user))
     available_users = remove_user(available_users, primary_user)
 
-
     return available_users.shuffle
 
   end
