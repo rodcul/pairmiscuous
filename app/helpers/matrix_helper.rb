@@ -14,6 +14,8 @@ module MatrixHelper
     result
   end
 
+
+
   def find_all_pairs(cohort_name)
     result = [[]]
     c = Cohort.find_by(name: cohort_name)
@@ -54,6 +56,16 @@ module MatrixHelper
       end
     end
     matrix
+  end
+
+  def times_paired_total(user)
+    user.pairings.count
+  end
+
+  def times_paired_with(user1, user2)
+    pairs = find_pairs(user1)
+    pairs.pop if pairs.last.empty?
+    pairs.select { |x| x.first.user_id == user2.id || x.last.user_id == user2.id }.count
   end
 
   def populate_matrix(user_id, cohort_name)

@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @next_pair = User.first.username
   end
 
   # GET /users/1
@@ -59,6 +60,17 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def accept_pair
+    @current_user = User.last.username
+    @next_to_pair = User.first.username
+
+    redirect_to matrix_index_path
+  end
+
+  def replacements
+    @users = User.all
   end
 
   private
