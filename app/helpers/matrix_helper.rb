@@ -58,17 +58,14 @@ module MatrixHelper
     matrix
   end
 
-  def times_paired(user)
-    cohort_name = user.cohort.name
-    matrix = populate_entire_matrix(cohort_name)
+  def times_paired_total(user)
+    user.pairings.count
+  end
 
-    c = user.cohort
-
-
-
-    # find x
-
-    matrix[x].inject { |sum, value| sum += value }
+  def times_paired_with(user1, user2)
+    pairs = find_pairs(user1)
+    pairs.pop if pairs.last.empty?
+    pairs.select { |x| x.first.user_id == user2.id || x.last.user_id == user2.id }.count
   end
 
   def populate_matrix(user_id, cohort_name)
