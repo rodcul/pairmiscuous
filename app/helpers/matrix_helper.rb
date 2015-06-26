@@ -57,7 +57,7 @@ module MatrixHelper
   end
 
   def populate_matrix(user_id, cohort_name)
-    @matrix = empty_matrix(cohort_name)
+    matrix = empty_matrix(cohort_name)
     all_pairs = find_pairs(user_id)
 
     all_pairs.each do |pair|
@@ -67,7 +67,7 @@ module MatrixHelper
         matrix[pair[0].user_id - 1][pair[1].user_id - 1] += 1
       end
     end
-    @matrix
+    matrix
   end
 
 end
