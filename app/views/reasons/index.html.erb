@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Reasons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Pair</th>
+      <th>Reason</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reasons.each do |reason| %>
+      <tr>
+        <td><%= reason.user.name unless reason.user.nil? %></td>
+        <td><%= User.find(reason.pair_id).name unless reason.pair_id.nil? %></td>
+        <td><%= reason.reason %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

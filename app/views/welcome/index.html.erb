@@ -28,8 +28,9 @@
 				Pairmiscuous
 			</h1>
 			<h3>"Not Pairing makes Pandas sad"</h3>
-	</header>
 
+	</header>
+	</header>
 	<div class="container">
 		<% unless current_user %>
 		<div class="loginimage">
@@ -47,6 +48,8 @@
 					</a>
 
 			</GitButton>
+      <% else %>
+        <a href="/reasons/new">No (say a reason)</a>
 			<% end %>
 	</div>
 
