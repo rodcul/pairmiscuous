@@ -14,7 +14,7 @@ module PairingsHelper
   end
 
   # def assign_pairs(cohort_name)
-  #   # this is the method used elsewhere
+  #   # this is a method used elsewhere
   #   # odd number should return a final pair of one person
   # end
 

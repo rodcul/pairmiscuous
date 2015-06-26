@@ -25,6 +25,7 @@ describe 'Create a pair' do
   end
 
   it 'should return all cohort partners excluding those already paired today' do
+    create_test_cohort(20)
 
   end
 
