@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :reasons
   belongs_to :cohort
   belongs_to :pairing
   has_many :pairings
