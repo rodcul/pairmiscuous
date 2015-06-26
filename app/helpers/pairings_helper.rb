@@ -5,8 +5,9 @@ module PairingsHelper
     # Filter the available partners from the current cohort
     # Next version should filter users already paired for today in pair history
 
-    available_users = users_in_same_cohort_as(primary_user)
+    available_users = unpaired_users_today(cohort_of_user(primary_user))
     available_users = remove_user(available_users, primary_user)
+
 
     return available_users.shuffle
 
@@ -23,6 +24,10 @@ module PairingsHelper
     return User.where(cohort_id: user.cohort_id).find_each.to_a
   end
 
+  def cohort_of_user(user)
+    return Cohort.where(id: user.cohort_id).first
+  end
+
   def remove_user(user_list, reject_user=nil)
     return user_list.reject { |user| user == reject_user }
   end
@@ -33,7 +38,7 @@ module PairingsHelper
 
   def unpaired_users_today(cohort)
     return users_in_cohort(cohort).reject do |user|
-      Pairing.where(user_id: user.id, created_at: Date.today).first != nil
+      Pairing.where("created_at >= ? AND user_id = ?", Time.zone.now.beginning_of_day, user.id).first != nil
     end
   end
 

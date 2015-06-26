@@ -1,6 +1,7 @@
 require 'rails_helper'
 require './app/helpers/pairings_helper'
 include PairingsHelper
+require 'byebug'
 
 describe 'Create a pair' do
 
