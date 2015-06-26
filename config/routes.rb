@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/login" => 'sessions#new'
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
-  get "/matrix" => 'users#matrix'
+  get "/accept_pair" => 'users#accept_pair'
   get "/replacements" => 'users#replacements'
 
   # The priority is based upon order of creation: first created -> highest priority.
