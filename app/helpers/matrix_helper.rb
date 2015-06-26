@@ -14,6 +14,8 @@ module MatrixHelper
     result
   end
 
+
+
   def find_all_pairs(cohort_name)
     result = [[]]
     c = Cohort.find_by(name: cohort_name)
@@ -54,6 +56,19 @@ module MatrixHelper
       end
     end
     matrix
+  end
+
+  def times_paired(user)
+    cohort_name = user.cohort.name
+    matrix = populate_entire_matrix(cohort_name)
+
+    c = user.cohort
+
+
+
+    # find x
+
+    matrix[x].inject { |sum, value| sum += value }
   end
 
   def populate_matrix(user_id, cohort_name)

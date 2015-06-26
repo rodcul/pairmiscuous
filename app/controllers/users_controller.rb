@@ -65,6 +65,7 @@ class UsersController < ApplicationController
   def accept_pair
     @current_user = User.last.username
     @next_to_pair = User.first.username
+
     redirect_to matrix_index_path
   end
 
