@@ -5,15 +5,12 @@
 <table>
   <thead>
     <tr>
-      <% if current_user %>
-        <th><%= current_user.username%></th>
-        <th><%= current_user.name%></th>
+        <th>Username</th>
+        <th>Full name</th>
+        <th>Profile picture</th>
         <th>Slack username</th>
         <th colspan="3"></th>
-      <% else %>
-        <th><%=link_to "Sign in with Github", "/auth/github"%></th>
-  <% end %>
-    </tr>
+      </tr>
   </thead>
 
   <tbody>
@@ -32,4 +29,3 @@
 </table>
 
 <br>
-
