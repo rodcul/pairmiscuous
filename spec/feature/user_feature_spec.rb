@@ -17,10 +17,15 @@ feature 'As a Pairmiscuous user' do
 
   scenario 'accepting a pair' do
     sign_up('Rocco', 'rocco')
-    click_link('Back')
     click_link('Accept')
     expect(page).to have_content('Rocco and Molly')
     expect(page).to have_content('Congratulations on pairing.')
+  end
+
+  scenario 'rejecting a pair' do
+    sign_up('Rocco', 'rocco')
+    click_link('Reject')
+    expect(page).to have_content('Daryl Tim Chidu')
   end
 
   xscenario 'no pairs available' do
@@ -39,5 +44,6 @@ feature 'As a Pairmiscuous user' do
     fill_in('Full name', with: name)
     fill_in('Username', with: username)
     click_button('Create User')
+    click_link('Back')
   end
 end

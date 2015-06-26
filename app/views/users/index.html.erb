@@ -16,6 +16,7 @@
   <tbody>
     <%= "You are paired with #{@next_pair}" %>
     <%= link_to 'Accept', matrix_path %>
+    <%= link_to 'Reject', replacements_path %>
     <% @users.each do |user| %>
       <tr>
         <td><%= user.username %></td>

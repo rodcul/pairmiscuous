@@ -67,6 +67,11 @@ class UsersController < ApplicationController
     @next_to_pair = User.first.username
   end
 
+  def replacements
+    @users = User.all
+    @users
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
