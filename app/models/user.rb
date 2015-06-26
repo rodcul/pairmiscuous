@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth.provider
+      user.cohort = Cohort.first
       user.uid = auth.uid
       user.name = auth.info.name
       user.profile_picture = auth.info.image

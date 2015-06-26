@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -59,6 +60,16 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def accept_pair
+    @current_user = User.last.username
+    @next_to_pair = User.first.username
+    redirect_to matrix_index_path
+  end
+
+  def replacements
+    @users = User.all
   end
 
   private

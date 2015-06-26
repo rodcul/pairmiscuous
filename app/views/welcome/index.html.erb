@@ -18,80 +18,52 @@
 </head>
 
 <body>
-    <header>
-        <h1>Pairmiscuous</h1>
 
-        <h3>"Not Pairing makes Pandas sad"</h3><br>
-    </header>
 
-    <div class="container">
-        <% unless current_user %>
+	<header>
+		<center>
+			<h1>
+				Pairmiscuous
+			</h1>
+			<h3>"Not Pairing makes Pandas sad"</h3>
 
-        <div class="loginimage">
-            <img src=
-            "http://img04.deviantart.net/7530/i/2015/112/e/e/panda_logo_by_designguru211-d63i4d4.png"><br>
-        </div>
-        <br>
-        <br>
-        <a class="btn btn-block btn-social btn-github"><i class=
-        "fa fa-github"></i>
-        <%=link_to "Sign in with Github", "/auth/github"%></a> <% else %>
-        <div class="container">
+	</header>
+	</header>
+	<div class="container">
+		<% unless current_user %>
+		<div class="loginimage">
+			<center>
+				<img src="http://img04.deviantart.net/7530/i/2015/112/e/e/panda_logo_by_designguru211-d63i4d4.png">
+		</div>
+		<br>
+		<br>
 
-        <div class="row">
-            <div class="githubuserimage col-xs-3 col-sm-2 col-md-2 col-lg-3">
-                    <img src=
-                    "https://avatars1.githubusercontent.com/u/782506?v=3&s=400">
+			<GitButton>
+				<center>
+					<a class="btn btn-block btn-social btn-github">
+						<i class="fa fa-github"></i>
+						<%=link_to "Sign in with Github", "/auth/github"%>
+					</a>
 
-                    <ul>
-                        <li>
-                            <p><strong>Username:</strong>
-                            <%= @user.username %></p>
+			</GitButton>
+      <% else %>
+      <%= "You are paired with #{@next_pair.username}" %>
+      <img src='<%= @next_pair.profile_picture %>'>
+      <%= link_to 'Accept', accept_pair_path %>
+      <%= link_to 'Reject (say reason)', new_reason_path %>
 
-                            <p></p>
-                        </li>
+			<% end %>
+	</div>
 
-                        <li>
-                            <p><strong>Full name:</strong>
-                            <%= @user.full_name %></p>
-                        </li>
 
-                        <li>
-                            <p><strong>Slack username:</strong>
-                            <%= @user.slack_username %></p><%= link_to 'Edit', edit_user_path(@user) %>|
-                            <%= link_to 'Back', users_path %>
-                        </li>
-                    </ul><img src=
-                    "https://avatars0.githubusercontent.com/u/10839432?v=3&s=400">
 
-                    <p>Github Pairname</p>
 
-                    <p>Github slack name</p>
 
-                    <p></p>
-                </div><br>
-                <a href="#">Yes</a> <a href="/pairs/new">No (submit
-                reason)</a><br>
 
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle"
-                    data-toggle="dropdown" id="menu1" type="button">Cohort
-                    <span class="caret"></span></button>
 
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#" tabindex="-1">April 2015</a>
-                        </li>
-                    </ul><br>
-                </div>
-        </div>
-    </div>
 
-    <form>
-        <div class="form-group"></div><button class="btn btn-default" type=
-        "submit">Submit</button><br>
-        <% end %>
-    </form>
-    <br>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
 </body>
 </html>
