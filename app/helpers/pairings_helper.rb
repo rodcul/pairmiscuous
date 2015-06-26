@@ -1,15 +1,34 @@
 module PairingsHelper
 
-  # Return an array of potential partners in descending order of attractiveness
+  # Return an array of unpartnered users in descending order of attractiveness
   def pair_me(primary_user)
-    # Filter the available partners from the current cohort
-    # Next version should filter users already paired for today in pair history
 
     available_users = unpaired_users_today(cohort_of_user(primary_user))
     available_users = remove_user(available_users, primary_user)
 
-    return available_users.shuffle
+    # desirability is a hash that tracks desirability of each other user
+    desirability = {}
 
+    # initialise desirability as 1000 for 0 pairings, 500 for 1 etc
+    number_of_pairings = times_paired(primary_user)
+    available_users.each do |user|
+      desirability[user] = 1000 / (number_of_pairings[user].to_i + 1)
+    end
+
+    # sort available users according to desirability
+    available_users.sort_by!{ |user| desirability[user] }.reverse!
+
+    return available_users
+
+  end
+
+  def times_paired(user)
+    other_users = remove_user(users_in_same_cohort_as(user), user)
+    number_of_pairings = {}
+
+    # MEMO: to write
+
+    return number_of_pairings
   end
 
   def save_entire_pair(users=[])

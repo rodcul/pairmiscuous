@@ -14,6 +14,7 @@ describe 'Create a pair' do
   def create_pair_history(cohort,number_pairs,date=Date.today)
     number_pairs.times do
       save_entire_pair(unpaired_users_today(cohort)[0..1])
+
     end
   end
 
@@ -41,7 +42,6 @@ describe 'Create a pair' do
     create_test_cohort(20)
     create_pair_history(@cohort,9,Date.today.days_ago(1))
     create_pair_history(@cohort,4,Date.today.days_ago(2))
-    byebug
     expect(pair_me(@user[0]).length).to eq 19
   end
 
