@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  belongs_to :cohort
 
   def self.create_with_omniauth(auth)
     create! do |user|
@@ -7,5 +8,4 @@ class User < ActiveRecord::Base
       user.name = auth["info"]["name"]
     end
   end
-
 end
