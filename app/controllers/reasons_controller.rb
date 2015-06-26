@@ -26,6 +26,7 @@ class ReasonsController < ApplicationController
   def create
     @reason = Reason.new(reason_params)
     @reason.user_id = current_user.id
+    @reason.pair_id = params[:pair_id]
 
     respond_to do |format|
       if @reason.save

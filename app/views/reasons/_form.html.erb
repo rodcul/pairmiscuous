@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-  <%= hidden_field(:user_id, :token, :user_id => 22)%>
+
 
   <div class="field">
     <%= f.label :user_id %><br>
@@ -18,6 +18,8 @@
   </div>
   <div class="field">
     <%= f.label :pair_id %><br>
+    <%= params[:pair_id] %><br>
+    <%= hidden_field(:pair_id, 22)  %>
     <!-- <%= f.number_field :pair_id %> -->
     # PAIR #
   </div>
