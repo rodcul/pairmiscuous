@@ -1,76 +1,97 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-
-  <title>Pairmiscuous</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-with, initial-scale=0.1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <%= stylesheet_link_tag "styles.css" %>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-
+    <title>Pairmiscuous</title>
+    <meta charset="utf-8">
+    <meta content="width=device-with, initial-scale=0.1" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <%= stylesheet_link_tag "styles.css" %>
+    <%= stylesheet_link_tag "fonts.css" %>
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href=
+    "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel=
+    'stylesheet' type='text/css'>
 </head>
 
-
-
 <body>
+    <header>
+        <h1>Pairmiscuous</h1>
 
-	<header>
-		<center>
-			<h1>
-				Pairmiscuous
-			</h1>
-			<h3>"Not Pairing makes Pandas sad"</h3>
+        <h3>"Not Pairing makes Pandas sad"</h3><br>
+    </header>
 
-	</header>
-	</header>
-	<div class="container">
-		<% unless current_user %>
-		<div class="loginimage">
-			<center>
-				<img src="http://img04.deviantart.net/7530/i/2015/112/e/e/panda_logo_by_designguru211-d63i4d4.png">
-		</div>
-		<br>
-		<br>
+    <div class="container">
+        <% unless current_user %>
 
-			<GitButton>
-				<center>
-					<a class="btn btn-block btn-social btn-github">
-						<i class="fa fa-github"></i>
-						<%=link_to "Sign in with Github", "/auth/github"%>
-					</a>
+        <div class="loginimage">
+            <img src=
+            "http://img04.deviantart.net/7530/i/2015/112/e/e/panda_logo_by_designguru211-d63i4d4.png"><br>
+        </div>
+        <br>
+        <br>
+        <a class="btn btn-block btn-social btn-github"><i class=
+        "fa fa-github"></i>
+        <%=link_to "Sign in with Github", "/auth/github"%></a> <% else %>
+        <div class="container">
 
-			</GitButton>
-      <% else %>
-        <a href="/reasons/new">No (say a reason)</a>
-			<% end %>
-	</div>
+        <div class="row">
+            <div class="githubuserimage col-xs-3 col-sm-2 col-md-2 col-lg-3">
+                    <img src=
+                    "https://avatars1.githubusercontent.com/u/782506?v=3&s=400">
 
+                    <ul>
+                        <li>
+                            <p><strong>Username:</strong>
+                            <%= @user.username %></p>
 
+                            <p></p>
+                        </li>
 
+                        <li>
+                            <p><strong>Full name:</strong>
+                            <%= @user.full_name %></p>
+                        </li>
 
+                        <li>
+                            <p><strong>Slack username:</strong>
+                            <%= @user.slack_username %></p><%= link_to 'Edit', edit_user_path(@user) %>|
+                            <%= link_to 'Back', users_path %>
+                        </li>
+                    </ul><img src=
+                    "https://avatars0.githubusercontent.com/u/10839432?v=3&s=400">
 
+                    <p>Github Pairname</p>
 
+                    <p>Github slack name</p>
 
+                    <p></p>
+                </div><br>
+                <a href="#">Yes</a> <a href="/pairs/new">No (submit
+                reason)</a><br>
 
-	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle"
+                    data-toggle="dropdown" id="menu1" type="button">Cohort
+                    <span class="caret"></span></button>
 
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#" tabindex="-1">April 2015</a>
+                        </li>
+                    </ul><br>
+                </div>
+        </div>
+    </div>
 
+    <form>
+        <div class="form-group"></div><button class="btn btn-default" type=
+        "submit">Submit</button><br>
+        <% end %>
+    </form>
+    <br>
 </body>
-
-
-
-
-
-
-
-
-
 </html>

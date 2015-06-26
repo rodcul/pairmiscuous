@@ -34,12 +34,14 @@ ActiveRecord::Schema.define(version: 20150626075904) do
   add_index "pairings", ["user_id"], name: "index_pairings_on_user_id", using: :btree
 
   create_table "reasons", force: :cascade do |t|
-    t.integer  "user_id"
     t.integer  "pair_id"
     t.string   "reason"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
+
+  add_index "reasons", ["user_id"], name: "index_reasons_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -58,5 +60,6 @@ ActiveRecord::Schema.define(version: 20150626075904) do
 
   add_foreign_key "pairings", "cohorts"
   add_foreign_key "pairings", "users"
+  add_foreign_key "reasons", "users"
   add_foreign_key "users", "cohorts"
 end
