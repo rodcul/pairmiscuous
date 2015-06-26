@@ -49,7 +49,10 @@
 
 			</GitButton>
       <% else %>
-        <a href="/reasons/new">No (say a reason)</a>
+      <%= "You are paired with #{@next_pair}" %>
+      <%= link_to 'Accept', accept_pair_path %>
+      <%= link_to 'Reject (say reason)', new_reason_path %>
+
 			<% end %>
 	</div>
 

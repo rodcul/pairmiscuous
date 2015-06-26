@@ -28,15 +28,17 @@ class ReasonsController < ApplicationController
     @reason.user_id = current_user.id
     @reason.pair_id = params[:pair_id]
 
+
     respond_to do |format|
       if @reason.save
-        format.html { redirect_to @reason, notice: 'Reason was successfully created.' }
+        format.html { redirect_to replacements_path, notice: 'Reason was successfully created.' }
         format.json { render :show, status: :created, location: @reason }
       else
         format.html { render :new }
         format.json { render json: @reason.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /reasons/1
