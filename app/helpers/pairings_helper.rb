@@ -1,5 +1,7 @@
 module PairingsHelper
 
+include MatrixHelper
+
   # Return an array of unpartnered users in descending order of attractiveness
   def pair_me(primary_user)
 
@@ -10,7 +12,7 @@ module PairingsHelper
     desirability = {}
 
     # initialise desirability as 1000 for 0 pairings, 500 for 1 etc
-    number_of_pairings = times_paired(primary_user)
+    number_of_pairings = count_of_user_pairings(primary_user)
     available_users.each do |user|
       desirability[user] = 1000 / (number_of_pairings[user].to_i + 1)
     end
@@ -22,11 +24,13 @@ module PairingsHelper
 
   end
 
-  def times_paired(user)
+  def count_of_user_pairings(user)
     other_users = remove_user(users_in_same_cohort_as(user), user)
     number_of_pairings = {}
 
-    # MEMO: to write
+    other_users.each do |other_user|
+      number_of_pairings[other_user] = times_paired_with(user,other_user)
+    end
 
     return number_of_pairings
   end
