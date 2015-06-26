@@ -11,9 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20150626075904) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,13 +40,10 @@ ActiveRecord::Schema.define(version: 20150626075904) do
     t.string   "slack_username"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-<<<<<<< HEAD
-=======
+    t.integer  "cohort_id"
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
->>>>>>> 52d90f5afca7da467e52f99b125f145ad8410259
-    t.integer  "cohort_id"
   end
 
   add_index "users", ["cohort_id"], name: "index_users_on_cohort_id", using: :btree

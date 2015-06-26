@@ -18,10 +18,15 @@ feature 'As a Pairmiscuous user' do
   scenario 'accepting a pair' do
     sign_up('Rocco', 'rocco')
     click_link('Back')
-    click_button('Accept')
-    expect(page).to have_content('Rocco and Chidu')
+    click_link('Accept')
+    expect(page).to have_content('Rocco and Molly')
     expect(page).to have_content('Congratulations on pairing.')
   end
+
+  scenario 'no pairs available' do
+    sign_up('Rocco', 'rocco')
+    click_link('Back')
+
 
   def sign_up(username, name)
     visit new_user_path

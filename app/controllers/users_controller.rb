@@ -62,6 +62,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def matrix
+    @current_user = User.last.username
+    @next_to_pair = User.first.username
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
