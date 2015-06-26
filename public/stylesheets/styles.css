@@ -1,0 +1,18 @@
+
+body{font-family: 'Poiret One', cursive; background-color: #1abc9c }
+
+.container2 {width:400px; height:400px; margin:0 auto; background-color: white; border-radius: 10px; padding:1em;
+ box-shadow:1px 1px 3px rgba(0,0,0,.3);}
+
+ .paircontainer{ width:400px; margin: 0 auto; margin-top: -100px; height:400px; background-color: white; border-radius: 10px; padding:1em;
+  box-shadow:1px 1px 3px rgba(0,0,0,.3);}
+
+ .githubimage img {border: 1px solid black; border-radius: 100%; max-width: 20%; height: auto;}
+
+ .loginimage img { max-width: 30%; height: auto;}
+
+ .githubuserimage img{border: 1px solid black; border-radius: 100%; max-width: 15%; height: auto;}
+
+
+
+.btn-github{ width: 20em;  height: 3em;}
