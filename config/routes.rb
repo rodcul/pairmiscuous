@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  resources :reasons
   resources :users
   root 'welcome#index'
   get "/login" => 'sessions#new'
