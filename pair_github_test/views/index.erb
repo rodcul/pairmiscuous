@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+
+  </head>
+  <body>
+    <% if @auth_result || session[:access_token] %>
+      Welcome
+    <% else %>
+      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= client_id %>">Sign Up for Github</a>
+    <% end %>
+</html>
