@@ -13,7 +13,13 @@ describe 'Create a pair' do
 
   def create_pair_history(cohort,number_pairs,date=Date.today)
     number_pairs.times do
-      save_entire_pair(unpaired_users_today(cohort)[0..1])
+      pair_id = Pairing.maximum(:pair_id).to_i+1
+      user = unpaired_users_today(cohort)[0]
+      Pairing.create(pair_id: pair_id, user_id: user.id,
+                     cohort_id: user.cohort_id, created_at: date)
+      user = unpaired_users_today(cohort)[0]
+      Pairing.create(pair_id: pair_id, user_id: user.id,
+                     cohort_id: user.cohort_id, created_at: date)
 
     end
   end
