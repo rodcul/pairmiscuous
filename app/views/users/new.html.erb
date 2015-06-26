@@ -1,5 +1,57 @@
-<h1>New User</h1>
+<body>
+
+  <header>
+    <center>
+      <h1>
+        Pairmiscuous
+      </h1>
+      <h3>"Not Pairing makes Pandas sad"</h3>
+  </header>
+
+
+  <section class="container2">
+
+    <div class="githubimage">
+      <img src="https://avatars1.githubusercontent.com/u/782506?v=3&s=400" <p>Github Username</p>
+    </div>
+    <br>
+
+    <h1>New User</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', users_path %>
+
+    <div class="dropdown">
+      <center>
+        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Cohort
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">April 2015</a></li>
+        </ul>
+    </div>
+    </div>
+
+    <form role="form">
+      <div class="form-group">
+        <label for="SlackName"></label>
+        <input type="SlackName" class="form-control" id="text" placeholder="Slack Username">
+      </div>
+      <div class="form-group">
+        <label for="pwd"></label>
+        <input type="Name" class="form-control" id="text" placeholder="User Nickname">
+      </div>
+      <center>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+
+
+  </section>
+
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
+</body>
