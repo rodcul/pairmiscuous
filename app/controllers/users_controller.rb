@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
+
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
   def index
     @users = User.all
-    @next_pair = User.first.username
   end
 
   # GET /users/1

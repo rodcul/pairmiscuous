@@ -11,7 +11,7 @@ feature 'As a Pairmiscuous user' do
   end
 
   scenario 'pair is shown' do
-    visit users_path
+    visit '/'
     expect(page).to have_content("You are paired with Molly");
   end
 
@@ -44,6 +44,6 @@ feature 'As a Pairmiscuous user' do
     fill_in('Full name', with: name)
     fill_in('Username', with: username)
     click_button('Create User')
-    click_link('Back')
+    visit '/'
   end
 end
