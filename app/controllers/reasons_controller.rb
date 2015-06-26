@@ -25,6 +25,7 @@ class ReasonsController < ApplicationController
   # POST /reasons.json
   def create
     @reason = Reason.new(reason_params)
+    @reason.user_id = current_user.id
 
     respond_to do |format|
       if @reason.save

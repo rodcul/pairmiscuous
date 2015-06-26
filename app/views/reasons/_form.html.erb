@@ -10,14 +10,16 @@
       </ul>
     </div>
   <% end %>
+  <%= hidden_field(:user_id, :token, :user_id => 22)%>
 
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= current_user.name %>
   </div>
   <div class="field">
     <%= f.label :pair_id %><br>
-    <%= f.number_field :pair_id %>
+    <!-- <%= f.number_field :pair_id %> -->
+    # PAIR #
   </div>
   <div class="field">
     <%= f.label :reason %><br>
