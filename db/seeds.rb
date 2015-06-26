@@ -42,4 +42,4 @@ def assign_pairs(cohort_name)
   end
 end
 
-7.times { assign_pairs('#april2015') }
+# 7.times { assign_pairs('#april2015') }

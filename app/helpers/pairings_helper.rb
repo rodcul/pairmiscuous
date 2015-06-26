@@ -5,10 +5,11 @@ module PairingsHelper
     # Filter the available partners from the current cohort
     # Next version should filter users already paired for today in pair history
     available_users = unpaired_users_today(cohort_of_user(primary_user))
+
     available_users = remove_user(available_users, primary_user)
 
     @list_of_users = available_users.shuffle
-
+    @list_of_users
   end
 
   def save_entire_pair(users=[])
