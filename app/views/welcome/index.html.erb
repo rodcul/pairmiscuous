@@ -31,6 +31,7 @@
 	</header>
 
 	<div class="container">
+		<% unless current_user %>
 		<div class="loginimage">
 			<center>
 				<img src="http://img04.deviantart.net/7530/i/2015/112/e/e/panda_logo_by_designguru211-d63i4d4.png">
@@ -38,7 +39,6 @@
 		<br>
 		<br>
 
-		<% unless current_user %>
 			<GitButton>
 				<center>
 					<a class="btn btn-block btn-social btn-github">
