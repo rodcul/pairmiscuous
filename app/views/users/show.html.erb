@@ -1,24 +1,72 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
+<body>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Full name:</strong>
-  <%= @user.full_name %>
-</p>
+    <header>
+        <h1>Pairmiscuous</h1>
 
-<p>
-  <strong>Profile picture:</strong>
-  <%= @user.profile_picture %>
-</p>
+        <h3><a href="#" style="margin-left: 1000px">Logout</a></h3><br>
+    </header>
 
-<p>
-  <strong>Slack username:</strong>
-  <%= @user.slack_username %>
-</p>
+    <div class="container">
+        <div class="githubuserimage">
+            <img src=
+            "https://avatars1.githubusercontent.com/u/782506?v=3&s=400">
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+            <ul>
+                <li>
+                    <p><strong>Username:</strong> <%= @user.username %></p>
+
+                    <p></p>
+                </li>
+
+                <li>
+                    <p><strong>Full name:</strong> <%= @user.full_name %></p>
+                </li>
+
+                <li>
+                    <p><strong>Slack username:</strong>
+                    <%= @user.slack_username %></p><%= link_to 'Edit', edit_user_path(@user) %>|
+                    <%= link_to 'Back', users_path %>
+                </li>
+            </ul>
+        </div>
+
+        <section class="paircontainer">
+            <div class="githubimage">
+                <img src=
+                "https://avatars0.githubusercontent.com/u/10839432?v=3&s=400">
+
+                <p>Github Pairname</p>
+
+                <p>Github slack name</p>
+
+                <p></p>
+            </div><br>
+            <a href="#">Yes</a> <a href="#">No</a>
+        </section><br>
+
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" data-toggle=
+            "dropdown" id="menu1" type="button">Cohort <span class=
+            "caret"></span></button>
+
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#" tabindex="-1">April 2015</a>
+                </li>
+            </ul><br>
+        </div>
+    </div>
+
+    <form>
+        <div class="form-group"></div><button class="btn btn-default" type=
+        "submit">Submit</button><br>
+    </form><script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
