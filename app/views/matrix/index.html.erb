@@ -1,0 +1,35 @@
+<center>
+<h1>Matrix for <%= @cohort.name %></h1>
+<br>
+<form action='/matrix'>
+  <select name='cohort' onchange='this.form.submit()'>
+    <option>Select Cohort</option>
+    <%= Cohort.all.each do |c| %>
+      <option value='<%= c.name %>'><%= c.name %></option>
+    <% end %>
+  </select>
+</form>
+<br><br>
+<table class="table table-striped table-hover ">
+<thead>
+    <tr>
+      <th>#</th>
+      <% @users.each do |u| %>
+        <th><center><%= u.full_name %></center></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% count = 0 %>
+    <% @matrix.each do |user| %>
+      <tr>
+        <td><%= @users[count].full_name %></td>
+        <% user.each do |u| %>
+          <td><center><%= u %></center></td>
+        <% end %>
+      </tr>
+      <% count += 1 %>
+    <% end %>
+  </tbody>
+</table>
+<br>
